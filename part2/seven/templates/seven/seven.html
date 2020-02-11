@@ -1,0 +1,17 @@
+{% if not pairs %}
+    {% include 'seven/form.html' %}
+{% endif %}
+
+<style>
+    * {
+        font-family: monospace !important;
+    }
+</style>
+
+{% if pairs %}
+    <p>Pairs: {{ pairs }}</p>
+{% else %}
+    <p> No pairs found </p>
+{% endif %}
+
+<a href="{% url 'seven_pairs' %}">Try again</a>
